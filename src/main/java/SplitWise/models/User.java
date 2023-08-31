@@ -13,4 +13,13 @@ public class User extends BaseModel{
     private String userName;
     private String hashedPassword;
     private String phoneNumber;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", hashedPassword='" + hashedPassword + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
 }

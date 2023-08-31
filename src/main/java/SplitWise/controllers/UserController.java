@@ -2,6 +2,8 @@ package SplitWise.controllers;
 
 import SplitWise.dtos.RegisterUserRequestDTO;
 import SplitWise.dtos.RegisterUserResponseDTO;
+import SplitWise.dtos.UpdateProfileRequestDTO;
+import SplitWise.dtos.UpdateProfileResponseDTO;
 import SplitWise.models.User;
 import SplitWise.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,14 @@ public class UserController {
         registerUserResponseDTO.setUser(user);
         return registerUserResponseDTO;
 
+    }
+
+    public UpdateProfileResponseDTO updateProfile(UpdateProfileRequestDTO registerUserRequestDTO){
+
+        User user = userService.updateProfile(registerUserRequestDTO.getUserId(), registerUserRequestDTO.getNewPassword());
+        UpdateProfileResponseDTO responseDTO = new UpdateProfileResponseDTO();
+        responseDTO.setUser(user);
+        return responseDTO;
     }
 
 }

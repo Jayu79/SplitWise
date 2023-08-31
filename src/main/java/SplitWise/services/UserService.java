@@ -25,4 +25,14 @@ public class UserService {
         return user1;
     }
 
+    public User updateProfile(Long userId, String newPassword){
+//        Written the update profile function to update only password. We can also extend the same function to update multiple fields
+        User user = userRepository.findUserById(userId);
+        user.setHashedPassword(newPassword);
+        User savedUser = userRepository.save(user);
+
+        return savedUser;
+    }
+
+
 }

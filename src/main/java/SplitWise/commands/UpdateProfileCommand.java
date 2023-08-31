@@ -1,5 +1,9 @@
 package SplitWise.commands;
 
+import SplitWise.controllers.UserController;
+import SplitWise.dtos.UpdateProfileRequestDTO;
+import SplitWise.dtos.UpdateProfileResponseDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -8,6 +12,13 @@ import java.util.List;
 
 @Service
 public class UpdateProfileCommand implements Command{
+
+    private UserController userController;
+
+    @Autowired
+    public UpdateProfileCommand(UserController userController){
+        this.userController = userController;
+    }
 
     @Override
     public boolean parse(String commandLine) {
@@ -30,6 +41,16 @@ public class UpdateProfileCommand implements Command{
 
     @Override
     public void execute(String commandLine) {
+        List<String> commandTokens = Arrays.stream(commandLine.split(" ")).toList();
+        Long userId = Long.parseLong(commandTokens.get(0));
+        String newPassword = commandTokens.get(2);
 
+        UpdateProfileRequestDTO requestDTO = new UpdateProfileRequestDTO();
+        requestDTO.setNewPassword(newPassword);
+        requestDTO.setUserId(userId);
+
+        UpdateProfileResponseDTO responseDTO = userController.updateProfile(requestDTO);
+
+        System.out.println(responseDTO.getUser());
     }
 }

@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
+@EnableJpaAuditing
 public class SplitWiseApplication implements CommandLineRunner {
 
 	@Autowired
@@ -31,10 +33,9 @@ public class SplitWiseApplication implements CommandLineRunner {
 
 //		String input = "INPUT FROM COMMAND LINE";
 //		String input = "Register jayanth 007 nameisjayu";
-		String input = "u1 UpdateProfile jayanth";
+		String input = "2 UpdateProfile miner007";
 
 		commandRegistry.executeCommandLine(input);
-
 //		while(true){
 //
 //			String input = "INPUT FROM COMMAND LINE";
