@@ -33,8 +33,8 @@ public class SplitWiseApplication implements CommandLineRunner {
 
 //		String input = "INPUT FROM COMMAND LINE";
 //		String input = "Register jayanth 007 nameisjayu";
-		String input = "2 UpdateProfile miner007";
-
+//		String input = "2 UpdateProfile miner007";
+		String input = "Register sindhu 123 pakkakipo";
 		commandRegistry.executeCommandLine(input);
 //		while(true){
 //
