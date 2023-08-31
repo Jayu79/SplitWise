@@ -1,8 +1,11 @@
 package SplitWise.commands;
 
+import org.springframework.stereotype.Service;
+
 import java.util.Arrays;
 import java.util.List;
 
+@Service
 public class RegisterUserCommand implements Command{
 
     @Override
@@ -27,6 +30,8 @@ public class RegisterUserCommand implements Command{
 
     @Override
     public void execute(String commandLine) {
+
+
 
     }
 }

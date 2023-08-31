@@ -2,10 +2,12 @@ package SplitWise.commands.registry;
 
 import SplitWise.commands.Command;
 import SplitWise.commands.CommandKeywords;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class CommandRegistryImplementation implements CommandRegistry{
 
     private List<Command> commands = new ArrayList<>();
