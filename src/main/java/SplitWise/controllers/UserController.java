@@ -5,7 +5,7 @@ import SplitWise.dtos.RegisterUserResponseDTO;
 import SplitWise.dtos.UpdateProfileRequestDTO;
 import SplitWise.dtos.UpdateProfileResponseDTO;
 import SplitWise.models.User;
-import SplitWise.services.UserService;
+import SplitWise.services.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 

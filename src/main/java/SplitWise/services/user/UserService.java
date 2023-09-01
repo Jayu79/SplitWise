@@ -1,4 +1,4 @@
-package SplitWise.services;
+package SplitWise.services.user;
 
 import SplitWise.models.User;
 import SplitWise.repositories.UserRepository;
