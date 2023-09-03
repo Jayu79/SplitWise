@@ -1,0 +1,7 @@
+Implemented an expense sharing application where users can split and settle their expenses either individually or as a group.
+The application takes input through a command line.
+Used spring-boot in craeting different models and mapping them as per their cardinality
+I implemented the entire project using a MySQL database and used JDBC to connect it with the main application.
+used a strategy design pattern while creating different settle-up strategies.
+Implemented two different settle-up strategies. One using arrays and the other using min and max heaps.
+Followed all the design patterns and created DTOs, models, repositories,services and controllers.
